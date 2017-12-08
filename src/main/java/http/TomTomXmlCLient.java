@@ -4,10 +4,10 @@ import java.text.MessageFormat;
 
 public class TomTomXmlCLient extends TomTomClient{
 
-    private static final String LINK_XML = "";
+    private static final String LINK_XML = "https://traffic.tomtom.com/tsq/hdf/ITA-HDF-DET-OPENLR/{0}/content.xml";
 
-    public TomTomXmlCLient(){
-        super();
+    public TomTomXmlCLient(String key){
+        super(key);
     }
 
     @Override
@@ -19,8 +19,16 @@ public class TomTomXmlCLient extends TomTomClient{
         return MessageFormat.format(LINK_XML, arguments);
     }
 
+    String getFileEnding(){
+        return ".xml";
+    }
+
+    public void run(){
+        super.run();
+    }
+
     @Override
     protected String generateFileString(){
-        return super.generateFileString() + ".xml";
+        return super.generateFileString();
     }
 }

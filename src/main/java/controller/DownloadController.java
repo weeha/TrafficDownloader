@@ -102,7 +102,7 @@ public class DownloadController implements Initializable {
 
         createLog();
         loadConfig();
-        tomTomButton.setSelected(false);
+        tomTomButton.setSelected(true);
         intervalField.setEditable(false);
         radiusField.setEditable(false);
         outputArea.setEditable(false);
@@ -234,12 +234,12 @@ public class DownloadController implements Initializable {
             dTimer = new Timer();
             if (tomTomButton.isSelected()) {
                 if(tomtomXML.isSelected()){
-                    TrafficClient tomTom = new TomTomXmlCLient();
+                    TrafficClient tomTom = new TomTomXmlCLient(tomtomKey.getText());
                     tomTom.setStopTime(end);
                     tomTom.setDownloadDir(downloadPath);
                     dTimer.schedule(tomTom, start, callInterval * 1000);
                 }if(tomtomProto.isSelected()){
-                    TrafficClient tomTom = new TomTomProtoClient();
+                    TrafficClient tomTom = new TomTomProtoClient(tomtomKey.getText());
                     tomTom.setStopTime(end);
                     tomTom.setDownloadDir(downloadPath);
                     dTimer.schedule(tomTom, start, callInterval * 1000);

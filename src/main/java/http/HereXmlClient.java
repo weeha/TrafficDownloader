@@ -19,7 +19,7 @@ public class HereXmlClient extends HereClient{
 
     @Override
     public String generateFileString(){
-        return super.generateFileString() + ".xml";
+        return super.generateFileString();
     }
 
     @Override

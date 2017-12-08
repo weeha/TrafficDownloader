@@ -67,7 +67,6 @@ public class InrixTokenClient extends TrafficClient{
                     }
                 }
                 String responseString = EntityUtils.toString(entity, "ISO-8859-1");
-                System.out.println(responseString);
                 Matcher matcher = pattern.matcher(responseString);
                 if(matcher.find()){
                     Instant instant = Instant.parse(matcher.group(1));
