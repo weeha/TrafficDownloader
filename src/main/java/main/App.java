@@ -13,8 +13,8 @@ public class App extends Application{
 
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/traffic_downloader.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 950, 630));
+        primaryStage.setTitle("TUM BGU Traffic Downloader");
+        primaryStage.setScene(new Scene(root, 952, 690));
         primaryStage.show();
     }
 

@@ -1,9 +1,11 @@
 package http;
 
+import java.text.MessageFormat;
+
 /**
  * Created by Florian Noack on 10.11.2017.
  */
-public class TomTomClient extends TrafficClient{
+public abstract class TomTomClient extends TrafficClient{
 
     public static final String LINK = "TOMTOM";
 
@@ -11,12 +13,20 @@ public class TomTomClient extends TrafficClient{
         super();
     }
 
-    @Override
-    final String getApiLink(){
-        return LINK;
+    String getFileEnding(){
+        return null;
     }
 
     public void run(){
         super.run();
+    }
+
+    public final String getAPIName(){
+        return "TomTom";
+    }
+
+    @Override
+    protected String generateFileString(){
+        return super.generateFileString() + "_TOMTOM";
     }
 }
