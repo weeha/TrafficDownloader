@@ -41,7 +41,7 @@ public class XdSegmentsClient extends InrixClient {
         };
 
         //return MessageFormat.format(LINK_RADIUS_SEGMENT_INFO, arguments);
-        return "http://api.inrix.com/traffic/inrix.ashx?action=getreferenceschemaingeography&Geoid=40&token=F-Ju40efyS1xppCDtZvedvVDprWtssGnx7u1TSTWjns%7C&LOCRefMethod=OPENLR";
+        return "http://api.inrix.com/traffic/inrix.ashx?action=getreferenceschemaingeography&Geoid=94&token=81MGJs3VdLE12kh6JTMyqvg0wU5HNhPhE14Ahzky9Ac%7C&LOCRefMethod=OPENLR";
     }
 
     public void run(){
